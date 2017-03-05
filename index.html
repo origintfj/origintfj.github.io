@@ -1,6 +1,275 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>TFJ Projects Homepage</h1>
-    </body>
-</html>
+<!-- saved from url=(0061)http://getbootstrap.com/2.3.2/examples/starter-template.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>TFJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://getbootstrap.com/2.3.2/examples/starter-template.html#">Project name</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="http://getbootstrap.com/2.3.2/examples/starter-template.html#">Home</a></li>
+              <li><a href="http://getbootstrap.com/2.3.2/examples/starter-template.html#about">About</a></li>
+              <li><a href="http://getbootstrap.com/2.3.2/examples/starter-template.html#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+          <h1>Downloads</h1>
+          <button class="btn btn-block btn-large btn-primary" type="button">Titan X1 Assembly Language Guide</button>
+          <button class="btn btn-block btn-large btn-primary" type="button">Titan X1 Programmer's Guide</button>
+          <button class="btn btn-block btn-large btn-success" type="button">Titan X1 Assembler (Win32)</button>
+        </div>
+        <div class="span8">
+          <h1>Greylock SoC</h1>
+          <p>Greylock is an SoC, it is comprised of the Titan X1 CPU and a number of peripherals.</p>
+          <h2 class="text-info">Peripheral Memory Map</h2>
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Peripheral</th>
+              <th>Base Address</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>External Memory</td>
+              <td>0x0000_0000</td>
+              <td>Main memory</td>
+            </tr>
+            <tr>
+              <td>UART0</td>
+              <td>0xFFFF_0000</td>
+              <td>General purpose UART</td>
+            </tr>
+            <tr>
+              <td>UART1</td>
+              <td>0xFFFF_0020</td>
+              <td>General purpose UART</td>
+            </tr>
+            <tr>
+              <td>UART2</td>
+              <td>0xFFFF_0040</td>
+              <td>General purpose UART</td>
+            </tr>
+            <tr>
+              <td>UART3</td>
+              <td>0xFFFF_0060</td>
+              <td>General purpose UART</td>
+            </tr>
+            <tr>
+              <td>SPI0</td>
+              <td>0xFFFF_0080</td>
+              <td>General purpose SPI master</td>
+            </tr>
+            <tr>
+              <td>SPI1</td>
+              <td>0xFFFF_00A0</td>
+              <td>General purpose SPI master</td>
+            </tr>
+            <tr>
+              <td>SPI2</td>
+              <td>0xFFFF_00C0</td>
+              <td>General purpose SPI master</td>
+            </tr>
+            <tr>
+              <td>SPI3</td>
+              <td>0xFFFF_00E0</td>
+              <td>General purpose SPI master</td>
+            </tr>
+            <tr>
+              <td>GPIO</td>
+              <td>0xFFFF_0100</td>
+              <td>General Purpose Input/Output</td>
+            </tr>
+            <tr>
+              <td>LCD Controller</td>
+              <td>0xFFFF_0140</td>
+              <td>LCD Interface Controller</td>
+            </tr>
+            <tr>
+              <td>Pin MUX</td>
+              <td>0xFFFF_0060</td>
+              <td>Pin Multiplexer Controller</td>
+            </tr>
+            <tr>
+              <td>Boot ROM</td>
+              <td>0xFFFF_F000</td>
+              <td>Contains the level 0 bootloader</td>
+            </tr>
+          </table>
+          <h2 class="text-info">Peripherals</h2>
+          <h3>UART</h3>
+          <h4>Register Interface Description</h4>
+          <h5>Receive/Transmit Buffer Register (RBR/TBR) / Divisor Latch LSB Register (DLL)</h5>
+          <b>Offset from base address: 0x0</b>
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Field (DLAB=0)</th>
+              <th>Bits</th>
+              <th>Default Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>RBR/TBR</td>
+              <td>7:0</td>
+              <td>N/A</td>
+              <td>Read the received data byte, or write the data byte to transmit</td>
+            </tr>
+          </table>
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Field (DLAB=1)</th>
+              <th>Bits</th>
+              <th>Default Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>DLL</td>
+              <td>7:0</td>
+              <td>Set for 115200 BAUD</td>
+              <td>Divisor Latch LSB</td>
+            </tr>
+          </table>
+          <h5>Interrupt Enable Register (IER) / Divisor Latch MSB Register (DLM)</h5>
+          <b>Offset from base address: 0x4</b>
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Field (DLAB=0)</th>
+              <th>Bits</th>
+              <th>Default Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>RDAI</td>
+              <td>0</td>
+              <td>0</td>
+              <td>Enable receive data available interrupt</td>
+            </tr>
+            <tr>
+              <td>TFEI</td>
+              <td>1</td>
+              <td>0</td>
+              <td>Enable transmit FIFO empty interrupt</td>
+            </tr>
+          </table>
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Field (DLAB=1)</th>
+              <th>Bits</th>
+              <th>Default Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>DLM</td>
+              <td>7:0</td>
+              <td>Set for 115200 BAUD</td>
+              <td>Divisor Latch MSB</td>
+            </tr>
+          </table>
+          <h5>Line Control Register (LCR)</h5>
+          <b>Offset from base address: 0xC</b>
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Field</th>
+              <th>Bits</th>
+              <th>Default Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>DLAB</td>
+              <td>7</td>
+              <td>0</td>
+              <td>0 : RBR, THR, and IER are accessible.  1 : DLL and DLM are accessible.</td>
+            </tr>
+          </table>
+          <h4>Example code for setting the BAUD rate</h4>
+          <b>Relevant definitions</b>
+<pre>
+.uart_base_address_hi     h0 ; set this to the top 16-bits of the UART base address
+.uart_base_address_lo     h0 ; set this to the bottom 16-bits of the UART base address
+.uart_reg_offset_dll      h0 ; DLL register byte offset
+.uart_reg_offset_dlm      h4 ; DLM register byte offset
+.uart_reg_offset_lcr      hc ; LCR register byte offset
+</pre>
+          <b>Sample code</b>
+<pre>
+; put the UART base address into r1
+mov     r1,     uart_base_address_lo
+movh    r1,     uart_base_address_hi
+; set the baud rate to 115200
+ldr     r0,     [r1, uart_reg_offset_lcr] ; read the lcr
+or      r0,     h8                        ; set DLAB bit to 1
+str     r0,     [r1, uart_reg_offset_lcr] ; write it back
+mov     r0,     uart_divisor_115200       ; set r0 to the correct divisor for 115200 baud
+str     r0,     [r1, uart_reg_offset_dll] ; write the divisor's lsb
+lsr     r0,     d8                        ; move the msb into the bottom byte
+str     r0,     [r1, uart_reg_offset_dlm] ; write the divisor's msb
+ldr     r0,     [r1, uart_reg_offset_lcr] ; read the lcr
+and     r0,     h7                        ; set DLAB bit to 0
+str     r0,     [r1, uart_reg_offset_lcr] ; write it back
+</pre>
+        </div>
+        <div class="span2">
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./bootstrap/js/jquery.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-transition.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-alert.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-modal.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-dropdown.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-scrollspy.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-tab.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-tooltip.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-popover.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-button.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-collapse.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-carousel.js.download"></script>
+    <script src="./bootstrap/js/bootstrap-typeahead.js.download"></script>
+
+  
+
+</body></html>
